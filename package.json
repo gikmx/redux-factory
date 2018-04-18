@@ -1,0 +1,59 @@
+{
+    "name": "@gik/redux-factory",
+    "version": "0.0.1",
+    "description": "A shorthand for our redux/redux-thunk workflow",
+    "license": "MIT",
+    "homepage": "https://github.com/gikmx/redux-factory#readme",
+    "contributors": [
+        "Héctor Menéndez <hector@gik.mx>"
+    ],
+    "keywords": [
+        "redux",
+        "redux-thunk",
+        "tools",
+        "utilities",
+        "presets"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gikmx/redux-factory.git"
+    },
+    "bugs": {
+        "url": "https://github.com/gikmx/redux-factory/issues"
+    },
+    "engines": {
+        "node": ">=6.11.3",
+        "npm": ">=5.4.2"
+    },
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "main": "lib/index.js",
+    "directories": {
+        "src": "./src",
+        "out": "./lib"
+    },
+    "scripts": {
+        "build": "gik-npm lint src && gik-npm build",
+        "start": "gik-npm start 'npm run build'",
+        "publish": "npm run build -s && npm publish --access public --tag",
+        "precommit": "npm run build -s && gik-npm version patch && gik-npm docs"
+    },
+    "@gik/npm": {
+        "jsdoc": {
+            "files": "./lib/**/*.js"
+        }
+    },
+    "devDependencies": {
+        "@gik/eslint-config-node": "0.0.5",
+        "@gik/npm": "^0.1.14"
+    },
+    "dependencies": {
+        "prop-types": "^15.6.1",
+        "react-redux": "^5.0.7",
+        "redux": "^4.0.0",
+        "redux-devtools-extension": "^2.13.2",
+        "redux-thunk": "^2.2.0"
+    }
+}
