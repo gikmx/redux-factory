@@ -1,4 +1,4 @@
-# [@gik/redux-factory](https://github.com/gikmx/redux-factory#readme) *0.0.4*
+# [@gik/redux-factory](https://github.com/gikmx/redux-factory#readme) *0.0.2*
 > A shorthand for our redux/redux-thunk workflow
 
 ##### Contributors

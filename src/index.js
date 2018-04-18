@@ -7,7 +7,7 @@ import {
     applyMiddleware as ApplyMiddleware,
 } from 'redux';
 
-export { Provider } from 'react-redux';
+export { Provider, connect as Connect } from 'react-redux';
 
 /**
  * Store creator.
