@@ -1,6 +1,6 @@
 {
     "name": "@gik/redux-factory",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A shorthand for our redux/redux-thunk workflow",
     "license": "MIT",
     "homepage": "https://github.com/gikmx/redux-factory#readme",
@@ -37,10 +37,15 @@
     "scripts": {
         "build": "gik-npm lint src && gik-npm build",
         "start": "gik-npm start 'npm run build'",
-        "publish": "npm run build -s && npm publish --access public --tag",
         "precommit": "npm run build -s && gik-npm version patch && gik-npm docs"
     },
     "@gik/npm": {
+        "babel": {
+            "comments": true,
+            "compact": false,
+            "sourceMaps": false,
+            "extends": "./.babelrc"
+        },
         "jsdoc": {
             "files": "./lib/**/*.js"
         }
