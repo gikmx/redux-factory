@@ -1,6 +1,6 @@
 {
     "name": "@gik/redux-factory",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A shorthand for our redux/redux-thunk workflow",
     "license": "MIT",
     "homepage": "https://github.com/gikmx/redux-factory#readme",

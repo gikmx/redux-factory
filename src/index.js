@@ -13,7 +13,7 @@ export { Provider, connect as Connect } from 'react-redux';
  * Store creator.
  * Shorthand for Redux's CreateStore.
  *
- * @param {Object} reducers - An object containing the reducers to register.
+ * @param {Object|Function} reducers - Either a reducer or an object containing reducers.
  * @param {Object} initStore - The initial value of the store.
  * @param {Array}  middleware - An array of middlewares to register.
  * @returns {ReduxStore} - The store to pass to the provider.
@@ -22,8 +22,10 @@ export function Store(reducers, initStore, middleware = []) {
 
     const reduxmiddleware = ApplyMiddleware(...middleware.concat(Thunk));
 
+    const root = typeof reducers === 'function' ? reducers : CombineReducers(reducers);
+
     return CreateStore(
-        CombineReducers(reducers), // Root reducer
+        root,
         initStore,
         ComposeWithDevTools({})(reduxmiddleware),
     );

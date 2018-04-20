@@ -1,4 +1,4 @@
-# [@gik/redux-factory](https://github.com/gikmx/redux-factory#readme) *0.0.3*
+# [@gik/redux-factory](https://github.com/gikmx/redux-factory#readme) *0.0.4*
 > A shorthand for our redux/redux-thunk workflow
 
 ##### Contributors
@@ -71,9 +71,10 @@ Shorthand for Redux's CreateStore.
             <code>reducers</code>
         </td>
         <td style="white-space: nowrap;">
-                <a href="#Object">Object</a>
+                <a href="#Object">Object</a> | 
+                <a href="#function">function</a>
         </td>
-        <td>An object containing the reducers to register.</td>
+        <td>Either a reducer or an object containing reducers.</td>
     </tr><tr>
         <td style="white-space: nowrap;">
             <code>initStore</code>
