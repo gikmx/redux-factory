@@ -44,7 +44,7 @@ export function Factory(initState, declarations, prefix) {
 
     PropTypes.checkPropTypes(
         {
-            initState: PropTypes.any.isRequired,
+            initState: PropTypes.any,
             declarations: PropTypes.objectOf(PropTypes.shape({
                 action: PropTypes.func.isRequired,
                 reducer: PropTypes.func.isRequired,
